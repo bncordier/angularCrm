@@ -1,0 +1,29 @@
+<span>
+  Search :
+  <input type="text" [(ngModel)]="searchCriteria" (keyup)="search()" />
+  <a matTooltip="Add a consumer" routerLink="/consumer-form" routerLinkActive="is-active">
+    <mat-icon>person_add</mat-icon>
+  </a>
+</span>
+
+<table>
+  <tr *ngFor="let consumer of consumersObs | async">
+    <td>{{ consumer.civility }}</td>
+    <td>{{ consumer.firstname }}</td>
+    <td>{{ consumer.lastname }}</td>
+    <td>{{ consumer.email | lowercase }}</td>
+    <td>{{ consumer.phone | phone }}</td>
+    <td>
+      <a matTooltip="Edition" [routerLink]="['/consumer-form', consumer.id]">
+        <mat-icon>edit</mat-icon></a
+      >
+    </td>
+    <td>
+      <button mat-button (click)="delete(consumer.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </tr>
+</table>
+
+

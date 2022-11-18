@@ -1,0 +1,41 @@
+<form [formGroup]="consumerForm" (ngSubmit)="validate()">
+  <p>
+    <mat-form-field>
+      <mat-select formControlName="civility" placeholder="Civilité">
+        <mat-option value="Mr">Mr</mat-option>
+        <mat-option value="Mme">Mme</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label for="firstname">firstname</mat-label>
+      <input matInput type="text" id="firstname" formControlName="firstname" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label for="lastname">lastname</mat-label>
+      <input matInput type="text" id="lastname" formControlName="lastname" />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <mat-label for="phone">phone</mat-label>
+      <input matInput type="text" id="phone" formControlName="phone" />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label for="email">email</mat-label>
+      <input matInput type="text" id="email" formControlName="email" />
+    </mat-form-field>
+  </p>
+
+
+<button mat-raised-button type="submit" color="success">{{idPresent? 'Update' : 'Add' }}</button>
+<button mat-raised-button type="button" color="alert" (click)="cancel();consumerForm.reset()">Cancel</button>
+
+
+</form>

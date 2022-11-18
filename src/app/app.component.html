@@ -1,21 +1,31 @@
 <mat-toolbar color="primary">
-  <span> {{title | uppercase}} </span>
+  <span> {{title}} </span>
   <span class="fill-space"></span>
   <span>
     <a matTooltip="Home"
       routerLink="/home"
-      routerLinkActive="is-active">
+      routerLinkActive="is-active"
+      color="primary"
+      >
       <mat-icon>home</mat-icon>
+    </a>
+  </span>
+  <span>
+    <a matTooltip="Consumer-List"
+      routerLink="/consumer-list"
+      routerLinkActive="is-active"
+      color="primary">
+      <mat-icon>list</mat-icon>
     </a>
   </span>
   <span>
     <a matTooltip="Login"
       routerLink="/login"
-      routerLinkActive="is-active">
+      routerLinkActive="is-active"
+      color="primary">
       <mat-icon>login</mat-icon>
     </a>
   </span>
-
 </mat-toolbar>
 
 <router-outlet></router-outlet>

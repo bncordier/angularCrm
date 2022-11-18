@@ -7,6 +7,20 @@ input.ng-invalid.ng-touched{
   border-color: red;
 }
 
+
 .is-active{
-  color: white;
+  color: orange;
+}
+
+
+.mat-success {
+  color: green;
+}
+
+.mat-alert{
+  color: red;
+}
+
+.mat-refresh{
+  color: blue;
 }
